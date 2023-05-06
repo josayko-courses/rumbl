@@ -1,0 +1,9 @@
+<h1>New User</h1>
+
+<.simple_form :let={f} for={@changeset} action={~p"/users"}>
+  <.input field={f[:name]} type="text" placeholder="Name"/>
+  <.input field={f[:username]} type="text" placeholder="Username" />
+  <:actions>
+    <.button>Create User</.button>
+  </:actions>
+</.simple_form>
