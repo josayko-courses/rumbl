@@ -9,6 +9,7 @@
 <.simple_form :let={f} for={@changeset} action={~p"/users"}>
   <.input field={f[:name]} type="text" placeholder="Name" />
   <.input field={f[:username]} type="text" placeholder="Username" />
+  <.input field={f[:password]} type="text" placeholder="Password" />
   <:actions>
     <.button>Create User</.button>
   </:actions>
