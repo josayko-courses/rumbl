@@ -1,0 +1,9 @@
+<h1>Login</h1>
+
+<.simple_form :let={f} for={@conn} action={~p"/sessions"} as={:session}>
+  <.input field={f[:username]} type="text" placeholder="Username" />
+  <.input field={f[:password]} type="password" placeholder="Password" />
+  <:actions>
+    <.button>Log in</.button>
+  </:actions>
+</.simple_form>
