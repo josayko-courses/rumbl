@@ -20,7 +20,7 @@ defmodule RumblWeb.VideoController do
   end
 
   def create(conn, %{"video" => video_params}, current_user) do
-    case Multimedia.create_video(current_user ,video_params) do
+    case Multimedia.create_video(current_user, video_params) do
       {:ok, video} ->
         conn
         |> put_flash(:info, "Video created successfully.")

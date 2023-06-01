@@ -15,18 +15,18 @@
             <li><%= @current_user.username %></li>
             <li>
               <.link href={~p"/sessions/delete"} method="delete" class="hover:text-zinc-700">
-              Log out
+                Log out
               </.link>
             </li>
           <% else %>
             <li>
               <.link href={~p"/users/new"} method="get" class="hover:text-zinc-700">
-              Register
+                Register
               </.link>
             </li>
             <li>
               <.link href={~p"/sessions/new"} method="get" class="hover:text-zinc-700">
-              Log in
+                Log in
               </.link>
             </li>
           <% end %>

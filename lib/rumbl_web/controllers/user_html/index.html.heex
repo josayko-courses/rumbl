@@ -2,9 +2,9 @@
 
 <table>
   <%= for user <- @users do %>
-  <tr>
-    <td><.user user={user}/></td>
-    <td><.link href={~p"/users/#{user.id}"}>View</.link></td>
-  </tr>
+    <tr>
+      <td><.user user={user} /></td>
+      <td><.link href={~p"/users/#{user.id}"}>View</.link></td>
+    </tr>
   <% end %>
 </table>
