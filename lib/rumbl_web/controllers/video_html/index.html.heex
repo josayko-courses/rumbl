@@ -11,6 +11,11 @@
   <:col :let={video} label="Url"><%= video.url %></:col>
   <:col :let={video} label="Title"><%= video.title %></:col>
   <:col :let={video} label="Description"><%= video.description %></:col>
+  <:col :let={video} label="Category">
+    <%= category_select_options(@categories)
+    |> Enum.find(&(elem(&1, 1) == video.category_id))
+    |> elem(0) %>
+  </:col>
   <:action :let={video}>
     <div class="sr-only">
       <.link navigate={~p"/manage/videos/#{video}"}>Show</.link>

@@ -5,6 +5,12 @@
   <.input field={f[:url]} type="text" label="Url" />
   <.input field={f[:title]} type="text" label="Title" />
   <.input field={f[:description]} type="text" label="Description" />
+  <.input
+    field={f[:category_id]}
+    type="select"
+    options={category_select_options(@categories)}
+    label="Category"
+  />
   <:actions>
     <.button>Save Video</.button>
   </:actions>
