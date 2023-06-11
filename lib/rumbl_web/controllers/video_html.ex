@@ -14,8 +14,6 @@ defmodule RumblWeb.VideoHTML do
   def video_form(assigns)
 
   def category_select_options(categories) do
-    options = for category <- categories, do: {category.name, category.id}
-    IO.inspect(options, label: "options")
-    options
+    for category <- categories, do: {category.name, category.id}
   end
 end
