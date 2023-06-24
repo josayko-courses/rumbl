@@ -11,10 +11,10 @@ defmodule Rumbl.TestHelpers do
         name: "Some User",
         username: "user#{System.unique_integer([:positive])}",
         password: attrs[:password] || "supersecret"
-      }),
+      })
       |> Accounts.register_user()
 
-      user
+    user
   end
 
   def video_fixture(%Accounts.User{} = user, attrs \\ %{}) do
@@ -25,8 +25,8 @@ defmodule Rumbl.TestHelpers do
         description: "a description"
       })
 
-      {:ok, video} = Multimedia.create_video(user, attrs)
+    {:ok, video} = Multimedia.create_video(user, attrs)
 
-      video
+    video
   end
 end
